@@ -55,9 +55,6 @@ type Listen struct {
 	EnableHTTP        bool
 	HTTPAddr          string
 	HTTPPort          int
-	AutoTLS           bool
-	Domains           []string
-	TLSCacheDir       string
 	EnableHTTPS       bool
 	EnableMutualHTTPS bool
 	HTTPSAddr         string
@@ -212,9 +209,6 @@ func newBConfig() *Config {
 			ServerTimeOut: 0,
 			ListenTCP4:    false,
 			EnableHTTP:    true,
-			AutoTLS:       false,
-			Domains:       []string{},
-			TLSCacheDir:   ".",
 			HTTPAddr:      "",
 			HTTPPort:      8080,
 			EnableHTTPS:   false,
